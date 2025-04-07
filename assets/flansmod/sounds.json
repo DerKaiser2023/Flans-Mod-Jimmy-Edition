@@ -1,0 +1,7 @@
+{
+	"emptyclick": {
+		"category" : "player",
+		"sounds" : [ "flansmod:emptyclick" ]
+		
+	}
+}
