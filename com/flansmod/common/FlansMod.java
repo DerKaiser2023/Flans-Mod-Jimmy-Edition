@@ -115,10 +115,16 @@ import net.minecraftforge.event.entity.player.PlayerDropsEvent;
 @Mod(
    modid = "flansmod",
    name = "Flan's Mod LabJac Edition",
-   version = "LabJac Mod Mark 5 - May 2019",
+   version = "LabJac Mod Mark 5 - May 2019 modified by Der Kaiser April 6 2025",
    acceptableRemoteVersions = "1.7.10"
 )
 public class FlansMod {
+
+   @Mod.EventHandler
+   public void postInit(FMLPostInitializationEvent event) {
+      ...
+      TechTreeManager.loadAllTrees(); // Custom tech trees
+   }
    public static boolean DEBUG = false;
    public static Configuration configFile;
    public static final String MODID = "flansmod";
