@@ -1,13 +1,13 @@
 [
 {
   "modid": "flansmod",
-  "name": "Flan's Mod",
-  "description": "Guns, planes and other vehicles in Minecraft.",
+  "name": "Flan's Mod jimmy edition",
+  "description": "Guns, planes and other vehicles in Minecraft. jimmy spilled blood on this.",
   "version": "1.0",
   "mcversion": "1.7.10",
   "url": "http://www.flansmod.com",
   "updateUrl": "",
-  "authorList": ["jamioflan"],
+  "authorList": ["jamioflan", "LabJac", "DerKaiser2023"],
   "credits": "All code contributors.",
   "logoFile": "flansmod.png",
   "screenshots": [],
