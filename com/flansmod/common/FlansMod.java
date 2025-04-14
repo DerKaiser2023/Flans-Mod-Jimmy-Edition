@@ -111,6 +111,7 @@ import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.entity.item.ItemTossEvent;
 import net.minecraftforge.event.entity.living.LivingSpawnEvent.CheckSpawn;
 import net.minecraftforge.event.entity.player.PlayerDropsEvent;
+import com.flantechtree.common.data.TechTreeManager;
 
 @Mod(
    modid = "flansmod",
