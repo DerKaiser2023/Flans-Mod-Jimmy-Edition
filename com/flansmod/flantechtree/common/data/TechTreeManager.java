@@ -21,6 +21,9 @@ public class TechTreeManager {
         // Navy
         germany.addNode("navy", new TechNode("uBoat", "Type VII U-Boat", 60));
 
+        // Uniforms
+        germany.addNode("uniforms", new TechNode("Stalhelm", "Stalhelm", 10));
+
         techTrees.put("Germany", germany);
     }
 
