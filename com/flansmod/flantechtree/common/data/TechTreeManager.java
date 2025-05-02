@@ -11,9 +11,9 @@ public class TechTreeManager {
 
         TechTree germany = new TechTree("Germany");
 
-        // Land
-        germany.addNode("land", new TechNode("kar98k", "Kar98k Rifle", 10));
-        germany.addNode("land", new TechNode("stg44", "StG-44 Assault Rifle", 20, "kar98k"));
+        // Guns
+        germany.addNode("Guns", new TechNode("kar98k", "Kar98k Rifle", 10));
+        germany.addNode("Guns", new TechNode("stg44", "StG-44 Assault Rifle", 20, "kar98k"));
 
         // Air
         germany.addNode("air", new TechNode("bf109", "Messerschmitt Bf 109", 50));

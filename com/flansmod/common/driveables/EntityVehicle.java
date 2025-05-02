@@ -1128,4 +1128,34 @@ public class EntityVehicle extends EntityDriveable implements IExplodeable {
       }
 
    }
+
+   @Override
+   public void onUpdate() {
+      super.onUpdate();
+
+      if (!worldObj.isRemote) {
+         doRammingDamage();
+      }
+   }
+
+   private void doRammingDamage() {
+    // Define the box around the vehicle where it can "hit" things
+    AxisAlignedBB hitbox = boundingBox.expand(1.5D, 0.5D, 1.5D);
+
+    List<Entity> entities = worldObj.getEntitiesWithinAABBExcludingEntity(this, hitbox);
+
+    for (Entity entity : entities) {
+        if (entity instanceof EntityLivingBase && !(entity instanceof EntityDriveable)) {
+            double speed = Math.sqrt(motionX * motionX + motionZ * motionZ);
+
+            if (speed > 0.2D) { // Adjust this value to control impact threshold
+                float damage = (float)(speed * 20.0F); // Optional: scale with tank weight
+
+                // You can use a custom damage source for better control
+                entity.attackEntityFrom(new EntityDamageSourceCollision("tank", this), damage);
+
+                entity.hurtResistantTime = 0; // Allow repeated hits
+            }
+        }
+    }
 }
