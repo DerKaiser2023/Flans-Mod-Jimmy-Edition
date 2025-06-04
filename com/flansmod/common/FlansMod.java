@@ -120,12 +120,6 @@ import com.flantechtree.common.data.TechTreeManager;
    acceptableRemoteVersions = "1.7.10"
 )
 public class FlansMod {
-
-   @Mod.EventHandler
-   public void postInit(FMLPostInitializationEvent event) {
-      ...
-      TechTreeManager.loadAllTrees(); // Custom tech trees
-   }
    public static boolean DEBUG = false;
    public static Configuration configFile;
    public static final String MODID = "flansmod";
